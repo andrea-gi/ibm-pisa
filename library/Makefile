@@ -5,7 +5,7 @@ CLANG=$(LLVM_INSTALL)/bin/clang
 LLVM_VERSION=$(shell $(CLANG) --version | grep version | sed "s/.*version \([0-9]*\.[0-9]*\).*/\1/")
 LLVM_VERSION_MAJOR=$(word 1, $(subst ., ,$(LLVM_VERSION)))
 LLVM_VERSION_MINOR=$(word 2, $(subst ., ,$(LLVM_VERSION)))
-CXX?=g++
+CXX=mpiCC
 
 CPPFLAGS=-I$(LLVM_INSTALL)/include -I$(LLVM_INSTALL)/include/llvm/Support -I$(MPI_DIR)/include -D_DEBUG -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -DLLVM_VERSION_MINOR=$(LLVM_VERSION_MINOR) -g
 CXXFLAGS=-W -Wall -O3 -DLLVM_VERSION_MINOR=$(LLVM_VERSION_MINOR) -std=c++11 -g

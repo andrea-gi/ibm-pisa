@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # set to $LLVM_ROOT/llvm-install
-export PISA_ROOT=/home/$USER
+export PISA_ROOT=/home/$USER/pisaFramework/
 export LLVM_INSTALL=$PISA_ROOT/llvm-install
 export LLVM_BUILD=$PISA_ROOT/llvm-build
 export LLVM_SRC=$PISA_ROOT/llvm-3.4
