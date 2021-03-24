@@ -1,2 +1,0 @@
-PISA configuration for microbenchmarks (https://github.com/andrea-gi/microbench).
-LLVM bitcode (<benchmark_name>.bc) is required as source for PISA instrumentation.
