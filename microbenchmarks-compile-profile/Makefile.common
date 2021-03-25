@@ -24,7 +24,7 @@ DRAGONEGG_FLAGS=-cpp -O0 -S -fplugin=$(DRAGONEGG) -ffixed-line-length-132 -fplug
 
 ## Software coupled instrumentation
 OPT_COUPLED_ANALYSIS_FLAGS=-load $(COUPLED_PASS_PATH)/Analysis.so -mem2reg -instnamer -analysis -app-name=$(APPNAME) -test-name=$(COMPILATION_SCENARIO)
-PISA_COUPLED_ANALYSIS_FLAGS=-max-expected-threads=16 -analyze-ilp -window-size=54 -analyze-data-temporal-reuse -analyze-memory-footprint -data-cache-line-size=128 -analyze-inst-temporal-reuse -inst-cache-line-size=16 -inst-size=1 -register-counting -mpi-stats -mpi-data -openmp-stats -external-library-call-count #-branch-entropy -branch-entropy-file="branch_ent"
+PISA_COUPLED_ANALYSIS_FLAGS=-max-expected-threads=16 -analyze-ilp -window-size=54 -analyze-data-temporal-reuse -analyze-memory-footprint -data-cache-line-size=128 -analyze-inst-temporal-reuse -inst-cache-line-size=16 -inst-size=1 -register-counting -mpi-stats -mpi-data -openmp-stats -external-library-call-count -branch-entropy -branch-entropy-file="branch_ent"
 
 ## Software decoupled instrumentation
 # PISAPORT=1100
