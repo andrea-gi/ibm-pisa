@@ -145,6 +145,11 @@ $ mkdir analysis-build
 $ mkdir analysis-install
         
 $ cd analysis-build
+
+# Comment in $LLVM_ROOT/llvm-3.4/projects/Analysis/autoconf/configure.ac the following lines:
+# AC_CONFIG_MAKEFILE(tools/Makefile)
+# AC_CONFIG_MAKEFILE(tools/Analysis/Makefile)
+
 $ $LLVM_ROOT/llvm-3.4/projects/Analysis/configure --with-llvmsrc=$LLVM_ROOT/llvm-3.4 --with-llvmobj=$LLVM_ROOT/llvm-build --prefix=$LLVM_ROOT/analysis-install
 # for LLVM 3.5 or newer also add --enable-cxx11=yes
         
